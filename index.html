@@ -129,7 +129,7 @@ zbackup --password-file ~/.my_backup_password restore /my/backup/repo/backups/ba
 <h1>
 <a name="safety" class="anchor" href="#safety"><span class="octicon octicon-link"></span></a>Safety</h1>
 
-<p>Is it safe to use <code>zbackup</code> for production data? Being free software, the program comes with no warranty of any kind. That said, it's perfectly safe for production, and here's why. When performing a backup, the program never modifies or deletes any existing files -- only new ones are created. It specifically checks for that, and the code paths involved are short and easy to inspect. Furthermore, each backup is protected by its <code>SHA256</code> sum, which is calculated before piping the data into the deduplication logic. The code path doing that is also short and easy to inspect. When a backup is being restored, its <code>SHA256</code> is calculated again and compared against the stored one. The program would fail on a mismatch. Therefore, to ensure safety it is enough to restore each backup to <code>/dev/null</code> immediately after creating it. If it restores fine, it will restore fine ever after.
+<p>Is it safe to use <code>zbackup</code> for production data? Being free software, the program comes with no warranty of any kind. That said, it's perfectly safe for production, and here's why. When performing a backup, the program never modifies or deletes any existing files -- only new ones are created. It specifically checks for that, and the code paths involved are short and easy to inspect. Furthermore, each backup is protected by its <code>SHA256</code> sum, which is calculated before piping the data into the deduplication logic. The code path doing that is also short and easy to inspect. When a backup is being restored, its <code>SHA256</code> is calculated again and compared against the stored one. The program would fail on a mismatch. Therefore, to ensure safety it is enough to restore each backup to <code>/dev/null</code> immediately after creating it. If it restores fine, it will restore fine ever after.<br>
 To add some statistics, the author of the program has been using an older version of <code>zbackup</code> internally for over a year. The <code>SHA256</code> check never ever failed. Again, even if it does, you would know immediately, so no work would be lost. Therefore you are welcome to try the program in production, and if you like it, stick with it.</p>
 
 <h1>
@@ -200,9 +200,14 @@ Internally all input data is split into small blocks called chunks (up to <code>
 </ul><h1>
 <a name="communication" class="anchor" href="#communication"><span class="octicon octicon-link"></span></a>Communication</h1>
 
-<p>The program's website is at <a href="http://zbackup.org/">http://zbackup.org/</a>
-Development happens at <a href="https://github.com/zbackup/zbackup">https://github.com/zbackup/zbackup</a>
-Discussion forum is at <a href="https://groups.google.com/forum/#!forum/zbackup">https://groups.google.com/forum/#!forum/zbackup</a>. Please ask for help there!</p>
+<ul>
+<li>
+The program's website is at <a href="http://zbackup.org/">http://zbackup.org/</a>.</li>
+<li>
+Development happens at <a href="https://github.com/zbackup/zbackup">https://github.com/zbackup/zbackup</a>.</li>
+<li>
+Discussion forum is at <a href="https://groups.google.com/forum/#!forum/zbackup">https://groups.google.com/forum/#!forum/zbackup</a>. Please ask for help there!</li>
+</ul>
 
 <p>The author is reachable over email at <a href="mailto:ikm@zbackup.org">ikm@zbackup.org</a>. Please be constructive and don't ask for help using the program, though. In most cases it's best to stick to the forum, unless you have something to discuss with the author in private.</p>
 
