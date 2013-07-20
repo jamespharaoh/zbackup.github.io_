@@ -78,7 +78,7 @@ sudo make install
 
 <p>To use:</p>
 
-<div class="highlight"><pre>zbackup init --non-enrypted /my/backup/repo
+<div class="highlight"><pre>zbackup init --non-encrypted /my/backup/repo
 tar c /my/precious/data | zbackup backup /my/backup/repo/backups/backup-<span class="sb">`</span>date <span class="s1">'+%Y-%m-%d'</span><span class="sb">`</span>
 zbackup restore /my/backup/repo/backups/backup-<span class="sb">`</span>date <span class="s1">'+%Y-%m-%d'</span><span class="sb">`</span> &gt; /my/precious/backup-restored.tar
 </pre></div>
