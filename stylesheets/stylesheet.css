@@ -481,3 +481,11 @@ footer a:hover {
 #theme-by {
   font-size: 10px;
 }
+
+.release {
+  float: right;
+}
+
+.release .version {
+  font-weight: bold;
+}
