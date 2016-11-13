@@ -227,6 +227,8 @@ Discussion forum is at <a href="https://groups.google.com/forum/#!forum/zbackup"
 <li>
 <a href="http://duplicity.nongnu.org/">duplicity</a>, which looks similar to <code>rdiff-backup</code> with regards to mode of operation.</li>
 <li>Some filesystems (most notably <a href="http://en.wikipedia.org/wiki/ZFS">ZFS</a> and <a href="http://en.wikipedia.org/wiki/Btrfs">Btrfs</a>) provide deduplication features. They do so only at block level though, without a sliding window, so they can not accomodate to arbitrary byte insertion/deletion in the middle of data.</li>
+<li>
+<a href="http://rzbackup.com/">rzbackup</a>, which implements zbackup's restore algorithm, and supports a client/server model with a large cache which can make multiple restore operations much more efficient. Written in Rust and includes a rust library with the core repository logic.</li>
 </ul><h1>
 <a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h1>
 
